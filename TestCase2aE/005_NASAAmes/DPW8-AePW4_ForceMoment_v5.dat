@@ -92,7 +92,7 @@ DATASETAUXDATA TurbulenceModel = "SA-RC-QCR2000"
 DATASETAUXDATA GridId          = "Overset"
 DATASETAUXDATA FEMSolverName   = "NASTRAN"
 DATASETAUXDATA FEMAnalysisType = "LinearStatic"
-DATASETAUXDATA Notes           = "CFD grids were made in-house. FEM models were converted to SI units for compatibility"
+DATASETAUXDATA Notes           = "Nonlinear Block-Gauss-Seidel method used to couple the CFD and structural solvers. FEM file equivalent_beam_january_2025_SI.bdf"
 
 #-------------------------------------------------------------------------------
 #  REQUIRED:  VEHICLE F&M
