@@ -1,8 +1,7 @@
-# NASA Ames Submission (05/01/2026)
+# NASA Ames Research Center - LAVA Curvilinear Submission (05/01/2026)
 
 ### Aerodynamics
 **Solver**: LAVA Curvilinear  
-**Grid origin**: (0.0, 0.0, 0.0)  
 **Grid type**: Overset  
 
 ### Structures
