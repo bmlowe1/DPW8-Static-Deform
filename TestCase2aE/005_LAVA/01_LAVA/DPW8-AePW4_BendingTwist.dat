@@ -1,0 +1,191 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 WING BENDING & TWIST DEFORMATION DATA SUBMITTAL FORM (Version 1 - Oct. 28, 2025)
+#
+# Provide bending and twist deformation for Static Deformation Test Cases
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX  THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     K.KK ALPHA: Angle of attack for the solution
+#                     L    GRID LEVEL: 1, 2, 3, 4, 5, or 6
+#                     EXAMPLE: 007.02 - ALPHA 2.50 - GRID 3 - WING SECTION  1
+#
+# 
+#       NOMENCLATURE:
+#                  X:   X coordinate
+#                  Y:   Y coordinate
+#                  Z:   Z coordinate
+#                X/C:   Chord Fraction = (X - X_LE)/CHORD
+#                ETA:   Span fraction   = Y/BO2
+#               BEND:   Wing bending deformation       (X/C = 0.5) (deflection component in z-direction)
+#                       Bending is the vertical deflection component, i.e. Z_def - Z_undef. 
+#                       According to the definition used in the ETW SPT measuring system, 
+#                       bending deflections should be given wrt. the 50%-chord line, inches
+#              TWIST:   Wing twist deformation         (deflection component about y-axis)
+#                       Twist is the rotation component about the y-axis, 
+#                       i.e. the difference of local angle of attack between the 
+#                       aero-elasic equilibrium state and the baseline (design twist),
+#                       degrees - leading edge up is positive
+#              CHORD:   Local chord - distance from cut leading edge to trailing edge
+#
+#
+#    CUT DEFINITIONS:   ETA      Y        X_LE      X_TE      CHORD
+#    WING SECTION  1:   0.1306   151.072  1015.338  1463.276  447.937
+#    WING SECTION  2:   0.2009   232.391  1076.735  1477.180  400.445
+#    WING SECTION  3:   0.2828   327.129  1148.871  1494.004  345.133
+#    WING SECTION  4:   0.3971   459.345  1249.584  1527.854  278.270
+#    WING SECTION  5:   0.4286   495.783  1277.393  1546.718  269.325
+#    WING SECTION  6:   0.5024   581.151  1342.405  1590.812  248.408
+#    WING SECTION  7:   0.5546   641.534  1388.398  1622.014  233.616
+#    WING SECTION  8:   0.6028   697.289  1430.864  1650.809  219.945
+#    WING SECTION  9:   0.6773   783.467  1496.510  1695.318  198.809
+#    WING SECTION 10:   0.7268   840.726  1540.130  1724.889  184.759
+#    WING SECTION 11:   0.7954   920.079  1600.565  1765.856  165.290
+#    WING SECTION 12:   0.8456   978.148  1644.804  1795.835  151.030
+#    WING SECTION 13:   0.9150  1058.426  1705.958  1837.284  131.326
+#    WING SECTION 14:   0.9500  1098.913  1736.802  1858.188  121.387
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#    FLOW CONDITIONS:
+#                       Mach Number: 0.85
+#
+#   Cases 2a:           Re = 5M (Required/Optional): M = 0.85; Re = 5 million, Reference temperature = 120.0 deg F.
+#                       Constant CL = 0.5000 +/- 0.0001.
+#                       Use jig shape grid/geometry.
+#
+#   Cases 2b:           Re = 5M (Required/Optional): M = 0.85, Re = 5 million, Reference temperature = 120.0 deg F. 
+#                       Angle of attack polar.
+#                       Use jig shape grid/geometry.
+#
+#   Cases 2c:           Re = 20M (Required/Optional): M = 0.85, Re = 20 million, Reference temperature = XXX.X deg F. 
+#                       Angle of attack polar.
+#                       Use jig shape grid/geometry.
+#
+#   Cases 2d:           Re = 5M (Required/Optional): M = 0.85, Re = 5 million, Reference temperature = XXX.X deg F. 
+#                       Mach number polar.
+#                       Use jig shape grid/geometry.
+#
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#                   ALL ANGLES OF ATTACK IN ONE FILE FOR EACH CASE!!
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "005.01"
+# Column       1     2     3    
+VARIABLES = "ETA" "BEND" "TWIST"
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "005"
+DATASETAUXDATA SubmissionDate  = "05/01/2026"
+DATASETAUXDATA Name            = "Brandon Lowe"
+DATASETAUXDATA Email           = "Brandon.Lowe@nasa.gov"
+DATASETAUXDATA Institution     = "NASA Ames Research Center - Analytical Mechanics Associates"
+DATASETAUXDATA SolverName      = "LAVA Curvilinear Solver"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA-RC-QCR2000"
+DATASETAUXDATA GridId          = "Overset"
+DATASETAUXDATA FEMSolverName   = "NASTRAN"
+DATASETAUXDATA FEMAnalysisType = "LinearStatic"
+DATASETAUXDATA Notes           = "Nonlinear Block-Gauss-Seidel method used to couple the CFD and structural solvers. FEM file equivalent_beam_january_2025_SI.bdf"
+
+#-------------------------------------------------------------------------------
+#CASE 2: STATIC CRM WING/BODY FLUID-STRUCTURE INTERACTION
+#  REQUIRED:  CL=0.5000 +/- 0.0001
+#  OPTIONAL:  ANGLE OF ATTACK POLARS
+#  OPTIONAL:  ADDITIONAL REYNOLDS NUMBER
+#  OPTIONAL:  MACH NUMBER POLAR
+#             
+#-------------------------------------------------------------------------------
+
+ZONE T="005.01 - CL 0.50 - GRID L1 - Wing Deformation"
+AUXDATA GridLevel       = "1"
+AUXDATA Mach            = "0.85"
+AUXDATA Re              = "5000000.0"
+AUXDATA Alpha           = "2.3042236328125"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA CLtotal         = "0.5000259321593574"
+AUXDATA GridFileName    = "grid.R1_00_jig.x"
+            0.1306  0.000001576409664  -0.000006285847914
+            0.2009  0.000049317562208  -0.000282860420972
+            0.2828  0.000351641451333  -0.001972335063779
+            0.3971  0.002321149442403  -0.012721189188342
+            0.4286  0.003646574841358  -0.018749379428591
+            0.5024  0.008734000751994  -0.044003747563974
+            0.5546  0.014921860988902  -0.071051290066797
+            0.6028  0.023302666272482  -0.106704806216115
+            0.6773  0.042449207689472  -0.181352664980383
+            0.7268  0.060702172464730  -0.247028770672623
+            0.7954  0.094971786059705  -0.358455839109592
+            0.8456  0.127566258650190  -0.453502122321143
+            0.9150  0.184345071639028  -0.600765032053843
+            0.9500  0.218233309220417  -0.678947963919973
+
+
+ZONE T="005.01 - CL 0.50 - GRID L2 - Wing Deformation"
+AUXDATA GridLevel       = "2"
+AUXDATA Mach            = "0.85"
+AUXDATA Re              = "5000000.0"
+AUXDATA Alpha           = "2.3053283691406"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA CLtotal         = "0.4999918830659842"
+AUXDATA GridFileName    = "grid.R1_40_jig.x"
+            0.1306  0.000001453448979  -0.000005104016591
+            0.2009  0.000049337621187  -0.000282228046368
+            0.2828  0.000349653293300  -0.001946139592434
+            0.3971  0.002319670625747  -0.012705919329514
+            0.4286  0.003644891594356  -0.018685099304084
+            0.5024  0.008695097506673  -0.043175384487134
+            0.5546  0.014900141503402  -0.070984347433608
+            0.6028  0.023317192731675  -0.105465921982473
+            0.6773  0.042392926062007  -0.181323947268998
+            0.7268  0.060637819678992  -0.246630825552440
+            0.7954  0.094861023227177  -0.357893372872134
+            0.8456  0.127406468457814  -0.452881357494668
+            0.9150  0.184115763928332  -0.599723302083440
+            0.9500  0.217957324123513  -0.677760802583710
+
+ZONE T="005.01 - CL 0.50 - GRID L3 - Wing Deformation"
+AUXDATA GridLevel       = "3"
+AUXDATA Mach            = "0.85"
+AUXDATA Re              = "5000000.0"
+AUXDATA Alpha           = "2.302398681640625"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA CLtotal         = "0.4999640124087256"
+AUXDATA GridFileName    = "grid.R2_00_jig.x"
+            0.1306  0.000001615795137  -0.000006653991009
+            0.2009  0.000049281552817  -0.000282543641523
+            0.2828  0.000349662202663  -0.001947978059198
+            0.3971  0.002319471981854  -0.012711540211402
+            0.4286  0.003645375501372  -0.018674142285924
+            0.5024  0.008698145934537  -0.043286878349565
+            0.5546  0.014906331537817  -0.070948429975232
+            0.6028  0.023301945484696  -0.105947050415743
+            0.6773  0.042381158899311  -0.181210814893069
+            0.7268  0.060615918989592  -0.246520766539594
+            0.7954  0.094825758161180  -0.357946975211302
+            0.8456  0.127366202596005  -0.452535466184620
+            0.9150  0.184044638438060  -0.599499385735771
+            0.9500  0.217871086663616  -0.677463027606357
+
