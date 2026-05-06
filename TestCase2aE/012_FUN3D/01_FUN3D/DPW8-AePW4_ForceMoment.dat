@@ -1,0 +1,41 @@
+ 
+TITLE = "012.01"
+# Column       1     2     3     4       5    6     7     8    9 
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_TOT"    "CD_TOT"     "CM_TOT" 
+ 
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "012"
+DATASETAUXDATA SubmissionDate  = "05/05/2026"
+DATASETAUXDATA Name            = "Bret Stanford"
+DATASETAUXDATA Email           = "bret.k.stanford@nasa.gov"
+DATASETAUXDATA Institution     = "NASA Langley Research Center - Aeroelasticity Branch"
+DATASETAUXDATA SolverName      = "FUN3D SFE"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA-neg"
+DATASETAUXDATA GridId          = "unstructured"
+DATASETAUXDATA FEMSolverName   = "NASTRAN"
+DATASETAUXDATA FEMAnalysisType = "Modal"
+DATASETAUXDATA Notes           = "FUN3D coupled to a modal structure"
+             
+ZONE T="012.01 - GRID LEVEL 1"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+1 10797328 2.047e-05 0.8500  5000000.00 2.54480000 0.49997867 0.02607410 -0.03450115
+ZONE T="012.01 - GRID LEVEL 2"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+2 29584259 1.0454e-05 0.8500  5000000.00 2.50850000 0.50000321 0.02580040 -0.03680158
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 2.49560000 0.49999954 0.02570642 -0.03767559
+ZONE T="012.01 - GRID LEVEL 4"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+4 138766437 3.7309e-06 0.8500  5000000.00 2.48780000 0.50000554 0.02566400 -0.03829690

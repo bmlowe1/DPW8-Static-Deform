@@ -1,0 +1,61 @@
+ 
+TITLE = "012.01"
+# Column       1     2     3     4       5    6     7     8    9 
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_TOT"    "CD_TOT"     "CM_TOT" 
+ 
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "012"
+DATASETAUXDATA SubmissionDate  = "05/05/2026"
+DATASETAUXDATA Name            = "Bret Stanford"
+DATASETAUXDATA Email           = "bret.k.stanford@nasa.gov"
+DATASETAUXDATA Institution     = "NASA Langley Research Center - Aeroelasticity Branch"
+DATASETAUXDATA SolverName      = "FUN3D SFE"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA-neg"
+DATASETAUXDATA GridId          = "unstructured"
+DATASETAUXDATA FEMSolverName   = "NASTRAN"
+DATASETAUXDATA FEMAnalysisType = "Modal"
+DATASETAUXDATA Notes           = "FUN3D coupled to a modal structure"
+             
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 -1.50000000 -0.00962797 0.01592523 -0.05114767
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 0.00000000 0.17987298 0.01634882 -0.05074989
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 1.50000000 0.36582868 0.02032592 -0.04308248
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 2.50000000 0.50060958 0.02574105 -0.03766569
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 3.00000000 0.56832040 0.03044221 -0.03705097
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 3.50000000 0.62306124 0.03691273 -0.03100858
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 4.00000000 0.66231875 0.04487493 -0.01700729
+ZONE T="012.01 - GRID LEVEL 3"
+AUXDATA Tstatic         = "322.04K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "boo.x"
+3 68026429 6.0009e-06 0.8500  5000000.00 4.50000000 0.69631955 0.05368933 -0.00139514
